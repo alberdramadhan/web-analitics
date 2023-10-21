@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB ANALYTICS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>SELAMAT DATANG</h1>
+        <form method="post">
+            <div class="url-input">
+                <label for="url" style="display: block;">Silahkan Masukan URL:</label>
+                <input type="text" name="url" id="url" required>
+            </div>
+            
+            <div class="date-inputs">
+                <label for="date">Tanggal:</label>
+                <input type="number" name="date" id="date" min="1" max="31" required>
+        
+                <label for="month">Bulan:</label>
+                <input type="number" name="month" id="month" min="1" max="12" required>
+        
+                <label for="year">Tahun:</label>
+                <input type="number" name="year" id="year" value="2023" required>
+            </div>
+        
+            <input type="submit" value="CEK">
+        </form>
+
+        <hr>
+        {% if url %}
+        <h2>HASIL ANALISIS:</h2>
+        <table>
+            <tr>
+                <th>URL</th>
+                <th>Kode Status</th>
+                <th>Waktu Respon</th>
+            </tr>
+            <tr>
+                <td>{{ response_data['URL'] }}</td>
+                <td>{{ response_data['Status Code'] }}</td>
+                <td>{{ response_data['Response Time (s)'] }}</td>
+            </tr>
+        </table>
+        <hr>
+        <h2>HISTOGRAM JENIS KELAMIN:</h2>
+        <img src="{{ url_for('static', filename='gender_histogram.png') }}" alt="Gender Histogram">
+        
+        <h2>GRAFIK RATA RATA UMUR:</h2>
+        <img id="line_chart" src="{{ img_paths.line_chart }}" alt="Line Chart">
+        
+        <h2>LINGKARAN JUMLAH PENGUNJUNG:</h2>
+        <img id="pie_chart" src="{{ img_paths.pie_chart }}" alt="Pie Chart">
+        
+        <h2>GRAFIK BATANG DURASI PENGUNJUNG:</h2>
+        <img id="bar_chart" src="{{ img_paths.bar_chart }}" alt="Bar Chart">
+        {% endif %}
+    </div>
+    
+</body>
+
+</html>

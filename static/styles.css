@@ -1,0 +1,118 @@
+
+.url-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.url-input label {
+    width: 150px; 
+    margin-right: 20px; 
+}
+
+.url-input input {
+    flex: 1;
+}
+
+.date-inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.date-inputs label {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.date-inputs input {
+    width: calc(33.33% - 120px);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('analitik1.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form label[for="url"] {
+    display: inline-block;
+    width: 100px;
+}
+
+form label[for="date"],
+form label[for="month"],
+form label[for="year"] {
+    display: inline-block;
+    width: 100px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+hr {
+    margin: 20px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
